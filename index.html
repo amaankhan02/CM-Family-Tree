@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamilyTree</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>    
+    <div id="tree"></div>
+    <script src="familytree.js"></script>    
+    <script>
+            let family = new FamilyTree("#tree", {
+            // options
+            nodeBinding: {
+                field_0: "name"
+            },
+            nodes: [
+                { id: 1, pids: [2], name: "Amber McKenzie", gender: "female" },
+                { id: 2, pids: [1], name: "Ava Field", gender: "male" },
+                { id: 3, mid: 1, fid: 2, name: "Peter Stevens", gender: "male" }
+            ]  
+        });
+    </script>
+</body>
+
+</html>

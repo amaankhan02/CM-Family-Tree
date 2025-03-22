@@ -102,7 +102,7 @@ def save_to_json(people: dict[str, Person], save_filename):
 
 
 def main():
-    df = pd.read_excel('test_data_shortened.xlsx', sheet_name='Form Responses 1')
+    df = pd.read_excel('test_data_shortened.xlsx')
     people, id_to_person = add_all_people(df)
     update_parent_ids(df, people)
     update_partner_ids(df, people, id_to_person)
